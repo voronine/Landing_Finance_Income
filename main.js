@@ -33,29 +33,41 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// range
-
 const rangeInput = document.getElementById('investmentRange');
 const rangeValue = document.querySelector('.range-value');
-
-rangeInput.addEventListener('input', function() {
-    rangeValue.textContent = this.value;
-});
+const rangeInputIncome = document.getElementById('investmentRangeIncome');
+const rangeValueIncome = document.querySelector('.range-value-income');
 
 const range = document.querySelector(".range-slider");
+const rangeIncome = document.querySelector(".range-slider-income");
 
-function setInitialColor() {
-  const value = (range.value - range.min) / (range.max - range.min);
+function setInitialColorAndValue(element, valueElement) {
+  const value = (element.value - element.min) / (element.max - element.min);
   const percent = value * 100;
   const color = 'linear-gradient(to right, rgba(33, 160, 56, 1) 0%, rgba(33, 160, 56, 1) ' + percent + '%, rgba(227, 237, 227, 1) ' + percent + '%, rgba(227, 237, 227, 1))';
-  range.style.background = color;
+  element.style.background = color;
+  valueElement.textContent = element.value;
 }
 
-setInitialColor();
+setInitialColorAndValue(range, rangeValue);
+setInitialColorAndValue(rangeIncome, rangeValueIncome);
 
-range.addEventListener("input", function() {
-  const value = (range.value - range.min) / (range.max - range.min);
+function updateRangeAndColor(element, valueElement, relatedElement) {
+  const value = (element.value - element.min) / (element.max - element.min);
   const percent = value * 100;
   const color = 'linear-gradient(to right, rgba(33, 160, 56, 1) 0%, rgba(33, 160, 56, 1) ' + percent + '%, rgba(227, 237, 227, 1) ' + percent + '%, rgba(227, 237, 227, 1))';
-  range.style.background = color;
+  element.style.background = color;
+  valueElement.textContent = element.value;
+
+  const relatedValue = Math.round((element.value / element.max) * relatedElement.max);
+  relatedElement.value = relatedValue;
+  setInitialColorAndValue(relatedElement, relatedElement == rangeInputIncome ? rangeValueIncome : rangeValue);
+}
+
+rangeInput.addEventListener('input', function() {
+  updateRangeAndColor(rangeInput, rangeValue, rangeInputIncome);
+}); 
+
+rangeInputIncome.addEventListener('input', function() {
+  updateRangeAndColor(rangeInputIncome, rangeValueIncome, rangeInput);
 });

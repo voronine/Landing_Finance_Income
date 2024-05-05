@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Moyo header</title>
+    <title>Finance Income</title>
     <link rel="stylesheet" href="./style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" >
   </head>
@@ -258,6 +258,7 @@
           </div>
           <div class="count-income">
             <h2 class="h2 h2_count">Розрахуйте свій прибуток</h2>
+
             <div class="range_div">
               <h5 class="h5 h5_count">Сума інвестицій</h5>
               <div class="range-container">
@@ -270,11 +271,52 @@
                   <span class="range-label50">50 000</span>
               </div>
           </div>
+
+          <div class="range_div">
+            <h5 class="h5 h5_count">Сума прибутку</h5>
+
+            <div class="range-container">
+              <span class="range-value-income">35000</span>
+              <div class="inset-line"></div>
+                <input type="range" min="35000" max="210000" value="35000" step="5" id="investmentRangeIncome" class="range-slider-income">
+                <span class="range-label5">35 000</span>
+                <span class="range-label20">95 000</span>
+                <span class="range-label35">150 000</span>
+                <span class="range-label50">210 000</span>
+            </div>
+        </div>
           </div>
         </section>
-
       </div>
     </main>
+
+    <header class="header footer">
+      <div class="header__logo">
+        <a href="#home" class="header__homelink">
+          <img
+             src="./images/logo.svg"
+             class="logo"
+             alt="logo"
+           >
+        </a>
+      </div>
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link is-active" href="#about">Про нас</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#advantages">Переваги</a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="#calculator">Калькулятор прибутку</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
   <script src="main.js"></script>
 </html>
