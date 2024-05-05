@@ -10,313 +10,335 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" >
   </head>
   <body>
-    <header class="header">
-      <div class="header__logo">
-        <a href="#home" class="header__homelink">
-          <img
-             src="./images/logo.svg"
-             class="logo"
-             alt="logo"
-           >
-        </a>
-      </div>
-
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link is-active" href="#about">Про нас</a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#advantages">Переваги</a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#calculator">Калькулятор прибутку</a>
-          </li>
-
-          <li class="nav__item li_calculate"> 
-            <a class="nav__link a_calculate" href="#calculate">Розрахувати прибуток</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="main">
-      <div class="main__container">
-        <section class="first-section">
-          <div class="first-section-left">
-            <div class="invest">
-              <h3 class="section-h3">Інвестувати<br>проще, ніж здається!</h3>
-
-              <p class="first-section-p">
-                Кожен клієнт має доступ до нової інвестиційної платформи з
-                 можливістю отримання доходу. Будь ласка, пройдіть просту
-                  реєстрацію на сайті, а також ознайомтеся з інформацією нижче,
-                 щоб дізнатися, як підвищити свій дохід лише за кілька кроків!
-              </p>
-
+    <div class="container">
+      <div class="body_container">
+        <header class="header">
+          <div class="header__logo">
+            <a href="#home" class="header__homelink">
               <img
-             src="./images/icon.svg"
-             class="icon"
-             alt="icon"
+                src="./images/logo.svg"
+                class="logo"
+                alt="logo"
               >
-            </div>
-
-            <div class="counter">
-              <div class="clients">
-                <p class="h2">75+</p>
-                <p class="counter-p2">Клієнтів</p>
-              </div>
-
-              <div class="clients">
-                <p class="h2">4.9</p>
-                <p class="counter-p2">Рейтинг Довіри</p>
-              </div>
-
-              <div class="clients">
-                <p class="h2">100</p>
-                <p class="counter-p2">Інвестицій</p>
-              </div>
-            </div>
+            </a>
           </div>
 
-          <div class="first-section-right">
-            <div class="square-form">
-              <h4 class="square-form-h4">Почніть зараз</h4>
-              <form class="form" action="#">
-                <div class="text-field text-field_floating">
-                  <input class="text-field__input" type="name" id="text" required placeholder="Ваше ім'я">
-                  <label class="text-field__label" for="name">Ім'я*</label>
-                </div>
-              
-                <div class="text-field text-field_floating">
-                  <input class="text-field__input" type="name" id="text" required placeholder="Ваше прізвище">
-                  <label class="text-field__label" for="name">Прізвище*</label>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link is-active" href="#about">Про нас</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#advantages">Переваги</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#calculator">Калькулятор прибутку</a>
+              </li>
+
+              <li class="nav__item li_calculate"> 
+                <a class="nav__link a_calculate" href="#calculate">Розрахувати прибуток</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <main class="main">
+          <div class="main__container">
+            <section class="first-section">
+              <div class="first-section-left">
+                <div class="invest">
+                  <h3 class="section-h3">Інвестувати<br>проще, ніж здається!</h3>
+
+                  <p class="first-section-p">
+                    Кожен клієнт має доступ до нової інвестиційної платформи з
+                    можливістю отримання доходу. Будь ласка, пройдіть просту
+                      реєстрацію на сайті, а також ознайомтеся з інформацією нижче,
+                    щоб дізнатися, як підвищити свій дохід лише за кілька кроків!
+                  </p>
+
+                  <img
+                src="./images/icon.svg"
+                class="icon"
+                alt="icon"
+                  >
                 </div>
 
-                <div class="text-field text-field_floating">
-                  <input class="text-field__input" type="name" id="tel"  required placeholder="+3 (__) ___ - __ - __">
-                  <label class="text-field__label" for="name">Номер телефону*</label>
-                </div>
+                <div class="counter">
+                  <div class="clients">
+                    <p class="h2">75+</p>
+                    <p class="counter-p2">Клієнтів</p>
+                  </div>
 
-                <div class="text-field text-field_floating">
-                  <input class="text-field__input" type="name" id="email" placeholder="Введіть вашу пошту">
-                  <label class="text-field__label" for="name">Електронна пошта</label>
+                  <div class="clients">
+                    <p class="h2">4.9</p>
+                    <p class="counter-p2">Рейтинг Довіри</p>
+                  </div>
+
+                  <div class="clients">
+                    <p class="h2">100</p>
+                    <p class="counter-p2">Інвестицій</p>
+                  </div>
                 </div>
-              
-                <button class="button" type="submit">Відправити</button>
-              </form>
+              </div>
+
+              <div class="first-section-right">
+                <div class="square-form">
+                  <h4 class="square-form-h4">Почніть зараз</h4>
+                  <form class="form" action="#">
+                    <div class="text-field text-field_floating">
+                      <input class="text-field__input" type="name" id="text" required placeholder="Ваше ім'я">
+                      <label class="text-field__label" for="name">Ім'я*</label>
+                    </div>
+                  
+                    <div class="text-field text-field_floating">
+                      <input class="text-field__input" type="name" id="text" required placeholder="Ваше прізвище">
+                      <label class="text-field__label" for="name">Прізвище*</label>
+                    </div>
+
+                    <div class="text-field text-field_floating">
+                      <input class="text-field__input" type="name" id="tel"  required placeholder="+3 (__) ___ - __ - __">
+                      <label class="text-field__label" for="name">Номер телефону*</label>
+                    </div>
+
+                    <div class="text-field text-field_floating">
+                      <input class="text-field__input" type="name" id="email" placeholder="Введіть вашу пошту">
+                      <label class="text-field__label" for="name">Електронна пошта</label>
+                    </div>
+                  
+                    <button class="button" type="submit">Відправити</button>
+                  </form>
+                </div>
+              </div>
+              <img
+                src="./images/3d-cartoon-portrait-person-practicing-law-related-profession 1 (1).png"
+                class="icon_man"
+                alt="image"
+                  >
+            </section>
+
+            <div class="div_h2">
+              <p class="h2">Про нас</p>
             </div>
-          </div>
-          <img
-             src="./images/3d-cartoon-portrait-person-practicing-law-related-profession 1 (1).png"
-             class="icon_man"
-             alt="image"
-              >
-        </section>
 
-        <div class="div_h2">
-          <p class="h2">Про нас</p>
-        </div>
+            <section class="about">
+              <div class="about_right">
+                <div class="about_right_top">
+                  <div class="about_right_top_text">
+                    <h5 class="h5">
+                      Наша компанія - 
+                      це успішний лідер у сфері 
+                      фінансів
+                    </h5>
 
-        <section class="about">
-          <div class="about_right">
-            <div class="about_right_top">
-              <div class="about_right_top_text">
-                <h5 class="h5">
-                  Наша компанія - 
-                  це успішний лідер у сфері 
-                  фінансів
+                    <p class="about_text">
+                      Ми пишаємося своїми досягненнями
+                      та стабільністю. Наші клієнти довіряють 
+                      нам, оскільки ми надаємо їм найкращі 
+                      фінансові рішення. Ми ростемо та 
+                      розвиваємося разом із нашими партнерами.
+                    </p>
+                  </div>
+                  <div class="about_right_top_img">
+                    <img
+                        src="./images/about_top.png"
+                        class="about_top"
+                        alt="logo"
+                    >
+                  </div>
+                </div>
+
+                <div class="about_right_bottom">
+                  <div class="">
+                    <h5 class="h5 h5_right">
+                      Успіх нашої фінансової компанії:
+                    </h5>
+                    <p class="about_text">
+                      Полягає у 
+                      нашій ефективності та професіоналізмі. 
+                      Ми завжди вчасно реагуємо на зміни на 
+                      фінансовому ринку та надаємо своїм 
+                      клієнтам найкращі умови для зростання 
+                      їхнього капіталу. Наші успіхи свідчать про 
+                      нашу надійність та довгострокові 
+                      перспективи
+                    </p>
+                  </div>
+                  <div class="about_right_top_img">
+                    <img
+                        src="./images/about_bottom.png"
+                        class="about_bottom"
+                        alt="logo"
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="about_left">
+                <img
+                        src="./images/about_left.png"
+                        class="about_left_img"
+                        alt="logo"
+                    >
+                <h5 class="h5 h5_left">
+                  Наша фінансова компанія - це символ надійності 
+                  та стабільності. 
                 </h5>
-
-                <p class="about_text">
-                   Ми пишаємося своїми досягненнями
-                   та стабільністю. Наші клієнти довіряють 
-                   нам, оскільки ми надаємо їм найкращі 
-                   фінансові рішення. Ми ростемо та 
-                   розвиваємося разом із нашими партнерами.
+                <p class="about_text text_left">
+                  Ми забезпечуємо своїм клієнтам 
+                  високий рівень сервісу та індивідуальний підхід до 
+                  кожного випадку. Наші досягнення говорять за себе, і 
+                  ми пишаємося тим, що продовжуємо займати провідні 
+                  позиції на ринку фінансових послуг.
                 </p>
               </div>
-              <div class="about_right_top_img">
-                <img
-                    src="./images/about_top.png"
-                    class="about_top"
-                    alt="logo"
-                >
-              </div>
+            </section>
+
+            <div class="advantages_h2">
+              <p class="h2">Переваги</p>
+              <button class="advantages_button">
+                Вкластися зараз
+              </button>
             </div>
 
-            <div class="about_right_bottom">
-              <div class="">
-                <h5 class="h5 h5_right">
-                  Успіх нашої фінансової компанії:
-                </h5>
-                <p class="about_text">
-                  Полягає у 
-                  нашій ефективності та професіоналізмі. 
-                  Ми завжди вчасно реагуємо на зміни на 
-                  фінансовому ринку та надаємо своїм 
-                  клієнтам найкращі умови для зростання 
-                  їхнього капіталу. Наші успіхи свідчать про 
-                  нашу надійність та довгострокові 
-                  перспективи
-                </p>
+            <section class="advantages">
+              <div class="background_part">
               </div>
-              <div class="about_right_top_img">
-                <img
-                    src="./images/about_bottom.png"
-                    class="about_bottom"
-                    alt="logo"
-                >
-              </div>
-            </div>
-          </div>
-          <div class="about_left">
-            <img
-                    src="./images/about_left.png"
-                    class="about_left_img"
-                    alt="logo"
-                >
-            <h5 class="h5 h5_left">
-              Наша фінансова компанія - це символ надійності 
-              та стабільності. 
-            </h5>
-            <p class="about_text text_left">
-              Ми забезпечуємо своїм клієнтам 
-              високий рівень сервісу та індивідуальний підхід до 
-              кожного випадку. Наші досягнення говорять за себе, і 
-              ми пишаємося тим, що продовжуємо займати провідні 
-              позиції на ринку фінансових послуг.
-            </p>
-          </div>
-        </section>
+              <div class="carusel">
+                <div class="slide">
+                  <div class="slide_second slide_second1">
+                    <img
+                      src="./images/slide1.png"
+                      class="slide1"
+                      alt="slide1"
+                    >
+                </div>
+                <span class="span_carusel">Гнучка ефективність</span>
+                <p class="carusel_p">Дата виплати - 05.06.2024</p>
+                <p></p>
+                </div>
 
-        <div class="advantages_h2">
-          <p class="h2">Переваги</p>
-          <button class="advantages_button">
-            Вкластися зараз
-          </button>
+                <div class="slide">
+                  <div class="slide_second slide_second2">
+                    <img
+                      src="./images/slide2.png"
+                      class="slide2"
+                      alt="slide2"
+                    >
+                </div>
+                <span class="span_carusel">Швидка обробка</span>
+                <p class="carusel_p">Дата виплати - 06.06.2024</p>
+              </div>
+
+                <div class="slide">
+                  <div class="slide_second slide_second3">
+                    <img
+                      src="./images/slide3.png"
+                      class="slide3"
+                      alt="slide3"
+                    >
+                </div>
+                <span class="span_carusel">Індивідуальний підхід</span>
+                <p class="carusel_p">Дата виплати - 07.06.2024</p>
+              </div>
+              </div>
+            </section>
+
+            <section class="calculator">
+              <div class="income">
+                <p class="payment">Виплата від інвестицій</p>
+                <span class="payment_sum">100 000</span>
+                <div class="payment_div">
+                  <div class="payment_div_text">
+                    Нарахуємо бонусів за весь період
+                  </div>
+                  <div class="payment_div_sum">
+                    12 789
+                  </div>
+                </div>
+                <button class="payment_button">Розпочати Інвестувати</button>
+              </div>
+              <div class="count-income">
+                <h2 class="h2 h2_count">Розрахуйте свій прибуток</h2>
+
+                <div class="range_div">
+                  <h5 class="h5 h5_count">Сума інвестицій</h5>
+                  <div class="range-container">
+                    <span class="range-value">5000</span>
+                    <div class="inset-line"></div>
+                      <input type="range" min="5000" max="50000" value="5000" step="5" id="investmentRange" class="range-slider">
+                      <span class="range-label5">5000</span>
+                      <span class="range-label20">20 000</span>
+                      <span class="range-label35">35 000</span>
+                      <span class="range-label50">50 000</span>
+                  </div>
+              </div>
+
+              <div class="range_div">
+                <h5 class="h5 h5_count">Сума прибутку</h5>
+
+                <div class="range-container">
+                  <span class="range-value-income">35000</span>
+                  <div class="inset-line"></div>
+                    <input type="range" min="35000" max="210000" value="35000" step="5" id="investmentRangeIncome" class="range-slider-income">
+                    <span class="range-label5">35 000</span>
+                    <span class="range-label20">95 000</span>
+                    <span class="range-label35">150 000</span>
+                    <span class="range-label50">210 000</span>
+                </div>
+            </div>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <header class="header footer">
+          <div class="header__logo">
+            <a href="#home" class="header__homelink">
+              <img
+                src="./images/logo.svg"
+                class="logo"
+                alt="logo"
+              >
+            </a>
+          </div>
+
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link is-active" href="#about">Про нас</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#advantages">Переваги</a>
+              </li>
+
+              <li class="nav__item">
+                <a class="nav__link" href="#calculator">Калькулятор прибутку</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        
+        <div class="policity">
+          <p class="policity_p1">
+            Зробіть перший крок у ваш фінансовий майбутній разом з нами сьогодні, і дозвольте нам допомогти<br>
+              вам зробити кожен наступний крок на шляху до<br>
+              фінансової незалежності.<br>
+          </p>
+
+          <div class="policity_hr"></div>
+
+
+          <p class="policity_p2">
+            Зважаючи на те, що ви лише починаєте свій фінансовий шлях, ви можете відчувати себе впевнено, знаючи, що обрали найкраще місце для своїх інвестиційних потреб. Наша команда фахівців з фінансів працює над тим, щоб забезпечити вам найбільш прибуткові можливості, а наші інструменти і аналізи допоможуть вам приймати правильні рішення.<br>
+            Зробіть перший крок у ваш фінансовий майбутній разом з нами сьогодні, і дозвольте нам допомогти<br>
+            вам зробити кожен наступний крок на шляху до<br>
+            фінансової незалежності.
+          </p>
         </div>
-
-        <section class="advantages">
-          <div class="background_part">
-          </div>
-          <div class="carusel">
-            <div class="slide">
-              <div class="slide_second slide_second1">
-                <img
-                  src="./images/slide1.png"
-                  class="slide1"
-                  alt="slide1"
-                >
-            </div>
-            <span class="span_carusel">Гнучка ефективність</span>
-            <p class="carusel_p">Дата виплати - 05.06.2024</p>
-            <p></p>
-            </div>
-
-            <div class="slide">
-              <div class="slide_second slide_second2">
-                <img
-                  src="./images/slide2.png"
-                  class="slide2"
-                  alt="slide2"
-                >
-            </div>
-            <span class="span_carusel">Швидка обробка</span>
-            <p class="carusel_p">Дата виплати - 06.06.2024</p>
-          </div>
-
-            <div class="slide">
-              <div class="slide_second slide_second3">
-                <img
-                  src="./images/slide3.png"
-                  class="slide3"
-                  alt="slide3"
-                >
-            </div>
-            <span class="span_carusel">Індивідуальний підхід</span>
-            <p class="carusel_p">Дата виплати - 07.06.2024</p>
-          </div>
-          </div>
-        </section>
-
-        <section class="calculator">
-          <div class="income">
-            <p class="payment">Виплата від інвестицій</p>
-            <span class="payment_sum">100 000</span>
-            <div class="payment_div">
-              <div class="payment_div_text">
-                Нарахуємо бонусів за весь період
-              </div>
-              <div class="payment_div_sum">
-                12 789
-              </div>
-            </div>
-            <button class="payment_button">Розпочати Інвестувати</button>
-          </div>
-          <div class="count-income">
-            <h2 class="h2 h2_count">Розрахуйте свій прибуток</h2>
-
-            <div class="range_div">
-              <h5 class="h5 h5_count">Сума інвестицій</h5>
-              <div class="range-container">
-                <span class="range-value">5000</span>
-                <div class="inset-line"></div>
-                  <input type="range" min="5000" max="50000" value="5000" step="5" id="investmentRange" class="range-slider">
-                  <span class="range-label5">5000</span>
-                  <span class="range-label20">20 000</span>
-                  <span class="range-label35">35 000</span>
-                  <span class="range-label50">50 000</span>
-              </div>
-          </div>
-
-          <div class="range_div">
-            <h5 class="h5 h5_count">Сума прибутку</h5>
-
-            <div class="range-container">
-              <span class="range-value-income">35000</span>
-              <div class="inset-line"></div>
-                <input type="range" min="35000" max="210000" value="35000" step="5" id="investmentRangeIncome" class="range-slider-income">
-                <span class="range-label5">35 000</span>
-                <span class="range-label20">95 000</span>
-                <span class="range-label35">150 000</span>
-                <span class="range-label50">210 000</span>
-            </div>
-        </div>
-          </div>
-        </section>
-      </div>
-    </main>
-
-    <header class="header footer">
-      <div class="header__logo">
-        <a href="#home" class="header__homelink">
-          <img
-             src="./images/logo.svg"
-             class="logo"
-             alt="logo"
-           >
-        </a>
-      </div>
-
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link is-active" href="#about">Про нас</a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#advantages">Переваги</a>
-          </li>
-
-          <li class="nav__item">
-            <a class="nav__link" href="#calculator">Калькулятор прибутку</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+     </div>
+    </div>
   </body>
   <script src="main.js"></script>
 </html>

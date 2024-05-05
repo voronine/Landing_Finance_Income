@@ -21,6 +21,18 @@ h1, h2, h3, h4, h5 {
   box-sizing: border-box;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  background-color: #F6FBF7;
+}
+
+.body_container {
+  max-width: 1442px;
+  margin-inline: 139px;
+  background-color: #fff;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -123,6 +135,7 @@ h1, h2, h3, h4, h5 {
 
 .first-section {
   display: flex;
+  position: relative;
 }
 
 .first-section-left {
@@ -216,8 +229,8 @@ h1, h2, h3, h4, h5 {
 
 .icon_man {
   position: absolute;
-  right: -3px;
-  top: 154px;
+  left: 822px;
+  top: 26px;
   z-index: 1;
 }
 
@@ -392,11 +405,11 @@ h1, h2, h3, h4, h5 {
 .background_part {
   position: absolute;
   height: 519px;
-  width: 200%;
+  width: 1440px;
   background-color: #F6FBF7;
   z-index: -1;
   top: -95px;
-  left: -146px;
+  left: -145px;
 }
 
 .carusel {
@@ -456,10 +469,11 @@ h1, h2, h3, h4, h5 {
 
 .footer {
   justify-content: space-between;
-  padding-inline: 220px;
+  padding-left: 210px;
   border-top: 1px solid #E4EBF2;
   border-bottom: 0;
   padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .income {
@@ -666,4 +680,38 @@ input[type="range"]:focus {
   font-size: 18px;
   color: rgba(33, 160, 56, 1);
   font-weight: 600;
+}
+
+.policity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(246, 251, 247, 1);
+  height: 273px;
+  gap: 58px;
+  text-align: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20.8px;
+  color: rgba(120, 120, 120, 1);
+  padding: 24px 50px;
+  position: relative;
+}
+
+.policity_hr {
+  position: absolute;
+  top: 105px;
+  width: 100%;
+  height: 1px;
+  background: rgba(242, 243, 239, 1);
+}
+
+.policity_p1 {
+  margin-top: 24px;
+}
+
+.policity_p2 {
+  margin-bottom: 24px;
+  max-width: 900px;
 }
