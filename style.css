@@ -404,12 +404,12 @@ h1, h2, h3, h4, h5 {
 
 .background_part {
   position: absolute;
-  height: 519px;
-  width: 1440px;
-  background-color: #F6FBF7;
-  z-index: -1;
-  top: -95px;
-  left: -145px;
+    height: 519px;
+    width: 1441px;
+    background-color: #F6FBF7;
+    z-index: 0;
+    top: -95px;
+    left: -146px;
 }
 
 .carusel {
@@ -418,6 +418,8 @@ h1, h2, h3, h4, h5 {
   margin-top: 24px;
   gap: 24px;
   width: 100%;
+  position: relative;
+  z-index: 3;
 }
 
 .slide {
