@@ -18,28 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll(".nav__link:not(.a_calculate)");
-  const calculateLink = document.querySelector(".a_calculate");
-
-  links.forEach(link => {
-    link.addEventListener("click", function(event) {
-      event.preventDefault();
-      links.forEach(link => {
-        link.classList.remove("is-active");
-      });
-      this.classList.add("is-active");
-    });
-  });
-
-  calculateLink.addEventListener("click", function(event) {
-    event.preventDefault();
-    links.forEach(link => {
-      link.classList.remove("is-active");
-    });
-    this.classList.add("is-calculate-active");
-  });
-});
 
 document.addEventListener('DOMContentLoaded', function() {
   const logo = document.querySelector('.logo');
@@ -91,3 +69,88 @@ rangeInput.addEventListener('input', function() {
 rangeInputIncome.addEventListener('input', function() {
   updateRangeAndColor(rangeInputIncome, rangeValueIncome, rangeInput);
 });
+
+const dots = document.querySelectorAll('.dot');
+const slides = document.querySelectorAll('.slide');
+const carousel = document.querySelector('.carusel');
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove('active'));
+
+  slides[index].classList.add('active');
+}
+
+function showNextSlide() {
+  const currentSlideIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  const nextSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+  showSlide(nextSlideIndex);
+}
+
+function showPreviousSlide() {
+  const currentSlideIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  const previousSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+
+  showSlide(previousSlideIndex);
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    dots.forEach(dot => dot.classList.remove('active'));
+
+    dot.classList.add('active');
+
+    showSlide(index);
+
+    carousel.scrollLeft = index * carousel.offsetWidth;
+  });
+});
+
+let startX = 0;
+let endX = 0;
+
+carousel.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchmove', e => {
+  endX = e.touches[0].clientX;
+});
+
+carousel.addEventListener('touchend', () => {
+  if (startX - endX > 50) {
+    showNextSlide();
+  } else if (endX - startX > 50) {
+    showPreviousSlide();
+  }
+});
+
+showSlide(0);
+
+function updateActiveSlide(index) {
+  dots.forEach(dot => dot.classList.remove('active'));
+  slides.forEach(slide => slide.classList.remove('active'));
+
+  dots[index].classList.add('active');
+  slides[index].classList.add('active');
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    updateActiveSlide(index);
+  });
+});
+
+function showNextSlide() {
+  const currentSlideIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  const nextSlideIndex = (currentSlideIndex + 1) % slides.length;
+
+  updateActiveSlide(nextSlideIndex);
+}
+
+function showPreviousSlide() {
+  const currentSlideIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  const previousSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+
+  updateActiveSlide(previousSlideIndex);
+}

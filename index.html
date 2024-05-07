@@ -6,8 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Finance Income</title>
-    <link rel="stylesheet" href="./style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" >
+    <link rel="stylesheet" href="./style.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="./style-mobile.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+
   </head>
   <body>
     <div class="container" id="home">
@@ -42,6 +44,9 @@
               </li>
             </ul>
           </nav>
+
+          <div class="burger">
+          </div>
         </header>
 
         <main class="main">
@@ -195,7 +200,7 @@
             </section>
 
             <div class="advantages_h2" id="advantages">
-              <p class="h2">Переваги</p>
+              <p class="h2 h2_about">Переваги</p>
               <button class="advantages_button">
                 Вкластися зараз
               </button>
@@ -238,9 +243,14 @@
                       alt="slide3"
                     >
                 </div>
-                <span class="span_carusel">Індивідуальний підхід</span>
-                <p class="carusel_p">Дата виплати - 07.06.2024</p>
+                  <span class="span_carusel">Індивідуальний підхід</span>
+                  <p class="carusel_p">Дата виплати - 07.06.2024</p>
+                </div>
               </div>
+              <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
               </div>
             </section>
 
@@ -297,14 +307,14 @@
             <a href="#home" class="header__homelink">
               <img
                 src="./images/logo.svg"
-                class="logo"
+                class="logo logo_footer"
                 alt="logo"
               >
             </a>
           </div>
 
           <nav class="nav">
-            <ul class="nav__list">
+            <ul class="nav__list nav__list__footer">
               <li class="nav__item">
                 <a class="nav__link is-active" href="#about">Про нас</a>
               </li>

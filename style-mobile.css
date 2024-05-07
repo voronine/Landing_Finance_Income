@@ -1,0 +1,436 @@
+@media only screen and (max-width: 1000px) {
+  .container {
+    min-width: 375px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .body_container {
+    min-width: 375px;
+    width: 100%;;
+    margin-inline: 0px;
+    flex-direction: column;
+  }
+  .nav__list {
+    display: none;
+  }
+
+  .header {
+    padding: 5.5px 20px;
+  }
+
+  .burger {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background-color: rgba(33, 160, 56, 1);
+  }
+
+  .main__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 42px;
+    min-width: 375px;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .first-section {
+    flex: 0;
+    margin-right: 0;
+    flex-direction: column;
+  }
+
+  .first-section-left {
+    flex: 1;
+    margin-right: 0;
+   }
+
+  .invest {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .section-h3 {
+    text-align: center;
+    font-size: 36px;
+    line-height: 46.8px;
+    margin-top: 16px;
+  }
+
+  .first-section-p {
+    font-size: 12px;
+    line-height: 15.6px;
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+
+  .first-section-right {
+    min-width: 275px;
+    width: 100%;
+    height: 447px;
+    left: 0px;
+    padding: 25px 16px 33px 16px;
+  }
+
+  .square-form {
+    width: 92%;
+    height: 389px;
+    padding-top: 16px;
+  }
+
+  .text-field_floating .text-field__input {
+    padding: 30px 0 8px 17px;
+  }
+
+  .icon_man {
+    display: none;
+  }
+
+  .counter {
+    left: -20px;
+    bottom: -590px;
+    height: 128px;
+    width: 111%;
+    padding-left: 0px;
+    padding-inline: 53px;
+    gap: 32px;
+    justify-content: space-between;
+  }
+
+  .div_h2 {
+    margin-top: 168px;
+  }
+
+  .h2 {
+    font-size: 27px;
+  }
+
+  .counter-p2 {
+    font-size: 12px;
+    flex: 1;
+    margin-right: 0px;
+
+  }
+  .about {
+    flex-direction: column;
+  }
+
+  .about_left_img {
+    height: 207px;
+    width: 207px;
+  }
+
+  .about_left {
+    margin-left: 0;
+    margin-bottom: 48px;
+  }
+
+  .h5_left {
+    text-align: center;
+  }
+
+  .advantages {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .advantages_h2  {
+    z-index: 1;
+    margin-top: 72px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .h2_about {
+    position: relative;
+    z-index: 1;
+    top: -40px;
+  }
+
+  .background_part {
+    width: 111.5%;
+    left: -20px;
+    height: 375px;
+    top: -110px;
+  }
+
+  .advantages_button {
+    position: absolute;
+    height: 48px;
+    width: 141px;
+    height: 48px;
+  }
+
+  .advantages_button {
+    position: absolute;
+    top: 370px;
+  }
+
+  .carusel {
+    overflow-x: scroll;
+    gap: 0;
+    scroll-snap-type: x mandatory;
+    border-radius: 42px;
+    background-color: #F6FBF7;
+    height: 318px;
+    margin-top: 0;
+    position: relative;
+    top: -24px;
+    left: 50px;
+    width: 70%;
+    box-shadow: 30px 20px 60px 0 rgba(23, 33, 0, 0.06); 
+  }
+
+  .slide {
+    text-align: center;
+  }
+
+  .slide_second {
+  border-radius:  24px;
+  }
+
+  .slide_second1, .slide_second2, .slide_second3 {
+    padding: 41px 30.5px
+  }
+
+  .slide1, .slide2, .slide3 {
+    width: 130px;
+    height: 130px;
+  }
+
+  .slide:not(:first-child) {
+    display: hidden;
+  }
+
+  .carusel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+
+  .carousel-dots {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: -15px;
+  }
+
+  .span_carusel {
+    font-size: 13.5px;
+  }
+
+  .carusel_p {
+    font-size: 12px;
+    margin-bottom: 35px;
+  }
+  
+  .dot {
+    height: 5px;
+    width: 5px;
+    background-color: rgba(227, 237, 227, 1);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background-color: rgba(33, 160, 56, 1);
+  }
+
+  .calculator {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .income {
+    order: 3;
+     width: 100%;
+  }
+
+  .count-income {
+    padding-top: 0px;
+    margin-left: 0px;
+    height: 100%;
+    margin-bottom: 28px;
+  }
+
+  .range-label20, .range-label35 {
+    display: none;
+  }
+
+  .payment_button { 
+    width: 100%;
+  margin-inline: 0px;
+  }
+  
+  .h2_count {
+    margin-bottom: 24px;
+  }
+
+  .range_div {
+    height: 100px;
+    padding: 0px 34px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .range-slider, .range-slider-income {
+    height: 5px;
+    top: 20px;
+  }
+
+  h5.h5_count {
+    margin-bottom: 0px;
+    position: absolute;
+    top: 18px;
+    font-size: 13.5px;
+  }
+
+  .inset-line {
+    height: 16px;
+    top: 9px;
+  }
+
+  .range-value, .range-value-income {
+    font-size: 13.5px;
+  }
+
+  .range-label50, .range-label5 {
+    font-size: 12px;
+    top: 40px;
+  }
+
+  .income {
+    height: 275px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .payment {
+    font-size: 12px;
+    padding-top: 24px;
+  }
+
+  .payment_sum {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .payment_div {
+    width: 82%;
+    padding: 15px 23px;
+  }
+
+  .payment_div_text {
+    font-size: 12px;
+    max-width: 120px;
+  }
+
+  .payment_div_sum {
+    font-size: 35.1px;
+  }
+
+  .payment_button {
+    font-size: 12px;
+    width: 85%;
+  }
+
+  .policity {
+    height: 100%;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .nav__list__footer {
+    display: flex;
+  }
+
+  .main__container {
+    margin-bottom: 24px;
+  }
+
+  .footer {
+    padding: 24px 50px 0px;
+  }
+
+  .header__logo {
+    margin: 0px;
+  }
+
+  .policity {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15.6px;
+    gap: 24px;
+  }
+
+  .policity_p1 {
+    margin: 0px;
+  }
+
+  .policity_hr {
+    top: 114px;
+  }
+
+  .policity_p2 {
+    margin-bottom:69px;
+  }
+
+  .about_left{
+    margin-top: 24px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .about_right_top, .about_right_bottom {
+    flex-direction: column;
+    height: 335px;
+    align-items: center;
+  }
+  .h5 {
+    font-size: 13.5px;
+    margin-bottom: 12px;
+    line-height: 17px;
+  }
+  
+  .about_text {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  .about_top {
+    width: 163px;
+    height: 166px;
+  }
+
+  .about_right_bottom {
+    height: 390px;
+    margin-bottom: 16px;
+  }
+
+  .about_bottom {
+    width: 133px;
+    height: 194px;
+  }
+
+  .nav__link {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
