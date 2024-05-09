@@ -723,3 +723,21 @@ input[type="range"]:focus {
   margin-bottom: 24px;
   max-width: 900px;
 }
+
+.error {
+  color: red;
+  font-size: 12px;
+  width: 100%;
+  position: absolute;
+  top: 52px;
+  left: 0;
+}
+
+.error-down {
+  color: red;
+  font-size: 14px;
+  width: 105%;
+  position: relative;
+  top: -8px;
+  text-align: center;
+}

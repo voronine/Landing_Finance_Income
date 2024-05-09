@@ -91,29 +91,39 @@
               <div class="first-section-right">
                 <div class="square-form">
                   <h4 class="square-form-h4">Почніть зараз</h4>
-                  <form class="form" action="#">
+                  <form 
+                    class="form"
+                    id="form"
+                  >
                     <div class="text-field text-field_floating">
-                      <input class="text-field__input" type="name" id="text" required placeholder="Ваше ім'я">
+                      <input class="text-field__input" type="text" id="name" name="name" required placeholder="Ваше ім'я">
                       <label class="text-field__label" for="name">Ім'я*</label>
+                      <span id="nameError" class="error"></span>
                     </div>
-                  
-                    <div class="text-field text-field_floating">
-                      <input class="text-field__input" type="name" id="text" required placeholder="Ваше прізвище">
+
+                      <div class="text-field text-field_floating">
+                      <input class="text-field__input" type="text" id="lastName" name="lastName" required placeholder="Ваше прізвище">
                       <label class="text-field__label" for="name">Прізвище*</label>
+                      <span id="lastNameError" class="error"></span>
                     </div>
 
                     <div class="text-field text-field_floating">
-                      <input class="text-field__input" type="name" id="tel"  required placeholder="+3 (__) ___ - __ - __">
+                      <input class="text-field__input" type="phone" id="phone" name="phone" required placeholder="+3 (__) ___ - __ - __">
                       <label class="text-field__label" for="name">Номер телефону*</label>
+                      <span id="phoneError" class="error"></span>
                     </div>
 
                     <div class="text-field text-field_floating">
-                      <input class="text-field__input" type="name" id="email" placeholder="Введіть вашу пошту">
+                      <input class="text-field__input" type="email" id="email" name="email" placeholder="Введіть вашу пошту">
                       <label class="text-field__label" for="name">Електронна пошта</label>
+                      <span id="emailError" class="error"></span>
                     </div>
                   
-                    <button class="button" type="submit">Відправити</button>
+                    <button class="button" type="submit" name="submit">Відправити</button>
                   </form>
+
+                  <div id="errorMessage" class="error-down" style="display:none;">Невірно заповнена форма.</div>
+
                 </div>
               </div>
               <img
