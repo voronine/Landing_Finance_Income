@@ -230,7 +230,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
     phone: phone
   };
 
-  console.log("Данные формы:", formData);
+  console.log("Вхідна інформація:", formData);
 
   this.reset();
 });
