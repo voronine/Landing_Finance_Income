@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   justify-content: center;
   background-color: #F6FBF7;
+  user-select: none;
 }
 
 .body_container {
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5 {
   border-bottom: 1px solid #E4EBF2;
 }
 
-.burger {
+.header__burger {
   display: none;
 }
 
@@ -399,6 +400,12 @@ h1, h2, h3, h4, h5 {
   font-weight: 400;
   font-size: 12px;
   font-family: "SB Sans Text", sans-serif;
+  cursor: pointer;
+}
+
+.advantages_button:hover, .payment_button:hover {
+  background-color: #17662A;
+  transform: scale(1.1);
 }
 
 .advantages {
@@ -546,6 +553,7 @@ h1, h2, h3, h4, h5 {
   border: 0;
   color: #fff;
   margin-inline: 30px;
+  cursor: pointer;
 }
 
 .count-income {
@@ -740,4 +748,8 @@ input[type="range"]:focus {
   position: relative;
   top: -8px;
   text-align: center;
+}
+
+.menu-overlay {
+  display: none;
 }

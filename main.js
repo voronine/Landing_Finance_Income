@@ -157,7 +157,7 @@ function showPreviousSlide() {
 
 document.getElementById("form").addEventListener("submit", function (event) {
   event.preventDefault();
-  
+
   let nameInput = document.getElementById("name");
   let lastNameInput = document.getElementById("lastName");
   let emailInput = document.getElementById("email");
@@ -171,7 +171,7 @@ document.getElementById("form").addEventListener("submit", function (event) {
   let lastName = lastNameInput.value.trim();
   let email = emailInput.value.trim();
   let phone = phoneInput.value.trim();
-  let isValid = true; // Флаг для отслеживания состояния валидации
+  let isValid = true;
   
   if (name === "") {
       nameError.textContent = "Будь ласка, введіть ім'я";
@@ -186,11 +186,11 @@ document.getElementById("form").addEventListener("submit", function (event) {
   }
 
   if (lastName === "") {
-      lastNameError.textContent = "Пожалуйста, введите фамилию";
+      lastNameError.textContent = "Будь ласка, введіть прізвище";
       lastNameInput.focus();
       isValid = false;
   } else if (!/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\s']*$/u.test(name)) {
-      lastNameError.textContent = "Фамилия должна содержать только буквы";
+      lastNameError.textContent = "Прізвище повинно містити лише букви";
       lastNameInput.focus();
       isValid = false;
   } else {
@@ -198,32 +198,31 @@ document.getElementById("form").addEventListener("submit", function (event) {
   }
 
   if (email === "") {
-      emailError.textContent = "Пожалуйста, введите email";
+      emailError.textContent = "Будь ласка, введіть email";
       emailInput.focus();
       isValid = false;
   } else if (!isValidEmail(email)) {
-      emailError.textContent = "Неправильный формат email";
+      emailError.textContent = "Невірний формат email";
       emailInput.focus();
       isValid = false;
   }
 
   if (phone === "") {
-      phoneError.textContent = "Пожалуйста, введите номер телефона";
+      phoneError.textContent = "Будь ласка, введіть номер телефону";
       phoneInput.focus();
       isValid = false;
   } else if (!isValidPhone(phone)) {
-      phoneError.textContent = "Неправильный формат номера телефона";
+      phoneError.textContent = "Невірний формат номера телефону";
       phoneInput.focus();
       isValid = false;
   }
 
   if (!isValid) {
-      event.preventDefault(); // Отменяем отправку формы, если есть ошибки
+      event.preventDefault();
   } else {
       errorMessage.style.display = "none";
   }
 
-  // Сбор данных в объект
   let formData = {
     name: name,
     lastName: lastName,
@@ -231,31 +230,28 @@ document.getElementById("form").addEventListener("submit", function (event) {
     phone: phone
   };
 
-  // Вывод данных в консоль
   console.log("Данные формы:", formData);
+
+  this.reset();
 });
 
-// Валидация email с использованием регулярного выражения
 function isValidEmail(email) {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
 
-// Валидация номера телефона для украинских операторов
 function isValidPhone(phone) {
-  var phoneRegex = /^(?:\+?38)?(?:\(0\d{2}\)|0\d{2})[ -]?\d{3}[ -]?\d{2}[ -]?\d{2}$/;
+  var phoneRegex = /^(?:\+\d{1,3}\s?)?\(?\d{2,3}\)?\s?\d{3}-?\d{2}-?\d{2}$/;
   return phoneRegex.test(phone);
 }
 
-// Дополнительная валидация при изменении поля ввода имени
 document.getElementById("name").addEventListener("input", function(event) {
   let nameInput = event.target;
   let nameError = document.getElementById("nameError");
   let errorMessage = document.getElementById("errorMessage");
   let name = nameInput.value.trim();
   
-  // Проверка на наличие только букв
-  if (!/^[a-zA-Zа-яА-Я]*$/.test(name)) {
+  if (!/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\s']*$/u.test(name)) {
       nameError.textContent = "Ім'я повинно содержати тільки букви";
       errorMessage.style.display = "block";
   } else {
@@ -264,16 +260,14 @@ document.getElementById("name").addEventListener("input", function(event) {
   }
 });
 
-// Дополнительная валидация при изменении поля ввода фамилии
 document.getElementById("lastName").addEventListener("input", function(event) {
   let lastNameInput = event.target;
   let lastNameError = document.getElementById("lastNameError");
   let errorMessage = document.getElementById("errorMessage");
   let lastName = lastNameInput.value.trim();
   
-  // Проверка на наличие только букв
-  if (!/^[a-zA-Zа-яА-Я]*$/.test(lastName)) {
-      lastNameError.textContent = "Фамілія повинна містити лише букви";
+  if (!/^[a-zA-Zа-яА-ЯёЁіІїЇєЄґҐ\s']*$/u.test(lastName)) {
+      lastNameError.textContent = "Прізвище повинно містити лише букв";
       errorMessage.style.display = "block";
   } else {
       lastNameError.textContent = "";
@@ -281,16 +275,14 @@ document.getElementById("lastName").addEventListener("input", function(event) {
   }
 });
 
-// Валидация email с использованием регулярного выражения
 document.getElementById("email").addEventListener("input", function(event) {
   let emailInput = event.target;
   let emailError = document.getElementById("emailError");
   let errorMessage = document.getElementById("errorMessage");
   let email = emailInput.value.trim();
   
-  // Проверка формата email
   if (!isValidEmail(email)) {
-      emailError.textContent = "Неправильний формат email";
+      emailError.textContent = "Невірний формат email";
       errorMessage.style.display = "block";
   } else {
       emailError.textContent = "";
@@ -298,19 +290,50 @@ document.getElementById("email").addEventListener("input", function(event) {
   }
 });
 
-// Валидация номера телефона с использованием регулярного выражения
 document.getElementById("phone").addEventListener("input", function(event) {
   let phoneInput = event.target;
   let phoneError = document.getElementById("phoneError");
   let errorMessage = document.getElementById("errorMessage");
   let phone = phoneInput.value.trim();
   
-  // Проверка формата номера телефона
   if (!isValidPhone(phone)) {
-      phoneError.textContent = "Неправильный формат номера телефона";
+      phoneError.textContent = "Невірний формат номера телефону";
       errorMessage.style.display = "block";
   } else {
       phoneError.textContent = "";
       errorMessage.style.display = "none";
   }
+});
+
+let burger = document.querySelector('.header__burger');
+let menuOverlay = document.querySelector('.menu-overlay');
+let menuLinks = document.querySelectorAll('.menu a');
+
+burger.addEventListener("click", function () {
+    this.classList.toggle("active");
+    menuOverlay.style.left = menuOverlay.style.left === '0px' ? '-100%' : '0px';
+    
+    document.body.classList.toggle('no-scroll');
+});
+
+menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        burger.classList.remove('active');
+        menuOverlay.style.left = '-100%';
+        
+        document.body.classList.remove('no-scroll');
+        
+        let target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+document.getElementById('scrollToForm').addEventListener('click', function() {
+  document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('scrollToForm2').addEventListener('click', function() {
+  document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
 });

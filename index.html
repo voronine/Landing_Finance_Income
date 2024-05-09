@@ -39,13 +39,24 @@
                 <a class="nav__link" href="#calculator">Калькулятор прибутку</a>
               </li>
 
-              <li class="nav__item li_calculate"> 
+              <li class="nav__item li_calculate">
                 <a class="nav__link a_calculate" href="#calculator">Розрахувати прибуток</a>
               </li>
             </ul>
           </nav>
+          <div class="container_burger">
+            <div class="header__burger">
+              <span></span>
+            </div>
 
-          <div class="burger">
+            <div class="menu-overlay">
+              <ul class="menu">
+                  <li><a class="nav__link" href="#about">Про нас</a></li>
+                  <li><a class="nav__link" href="#advantages">Переваги</a></li>
+                  <li><a class="nav__link" href="#calculator">Калькулятор прибутку</a></li>
+                  <li><a class="nav__link" href="#calculator">Розрахувати прибуток</a></li>
+              </ul>
+          </div>
           </div>
         </header>
 
@@ -211,8 +222,9 @@
 
             <div class="advantages_h2" id="advantages">
               <p class="h2 h2_about">Переваги</p>
-              <button class="advantages_button">
+              <button class="advantages_button" id="scrollToForm">
                 Вкластися зараз
+                <a href="#form" id="formLink"></a>
               </button>
             </div>
 
@@ -276,7 +288,10 @@
                     12 789
                   </div>
                 </div>
-                <button class="payment_button">Розпочати Інвестувати</button>
+                <button class="payment_button" id="scrollToForm2">
+                  Розпочати Інвестувати
+                  <a href="#form" id="formLink"></a>
+              </button>
               </div>
               <div class="count-income">
                 <h2 class="h2 h2_count">Розрахуйте свій прибуток</h2>
